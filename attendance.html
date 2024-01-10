@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Attendance System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:  #956d8b; /* Blackish background */
+            color: #ffffff; /* White text */
+            text-align: center; /* Center-align all content */
+        }
+
+        header {
+            background-color: #4b0082; /* Darker purple header */
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #800080; /* Purple navigation bar */
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .attendance-section {
+            background-color: #4b0082; /* Purple background for attendance section */
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: left;
+            width: 80%;
+            max-width: 600px;
+            box-sizing: border-box;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+
+        .attendance-section h2 {
+            color: #ffffff; /* White text for headings */
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .attendance-details {
+            margin-top: 10px;
+        }
+
+        .attendance-details p {
+            margin: 5px 0;
+        }
+
+        .date-input,
+        .time-input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        footer {
+            background-color: #4b0082; /* Darker purple footer */
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Hostel Management System</h1>
+    </header>
+
+ 
+
+    <div class="attendance-section">
+        <h2>Attendance Tracking</h2>
+        <div class="attendance-details">
+            <p>Student ID: <input type="text" id="studentId" name="studentId"></p>
+            <p>Name: <input type="text" id="studentName" name="studentName"></p>
+            <p>Check-In Date: <input type="date" id="checkInDate" name="checkInDate" class="date-input"></p>
+            <p>Check-In Time: <input type="time" id="checkInTime" name="checkInTime" class="time-input"></p>
+            <p>Check-Out Date: <input type="date" id="checkOutDate" name="checkOutDate" class="date-input"></p>
+            <p>Check-Out Time: <input type="time" id="checkOutTime" name="checkOutTime" class="time-input"></p>
+            <button onclick="submitAttendance()">Submit Attendance</button>
+        </div>
+    </div>
+
+    <script>
+        function submitAttendance() {
+            var studentId = document.getElementById("studentId").value;
+            var studentName = document.getElementById("studentName").value;
+            var checkInDate = document.getElementById("checkInDate").value;
+            var checkInTime = document.getElementById("checkInTime").value;
+            var checkOutDate = document.getElementById("checkOutDate").value;
+            var checkOutTime = document.getElementById("checkOutTime").value;
+
+            // Perform further processing or submission to a server
+            var message = "Attendance Submitted:\nStudent ID: " + studentId + "\nName: " + studentName +
+                "\nCheck-In Date: " + checkInDate + "\nCheck-In Time: " + checkInTime +
+                "\nCheck-Out Date: " + checkOutDate + "\nCheck-Out Time: " + checkOutTime;
+
+            alert(message);
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Hostel Management System. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
+
