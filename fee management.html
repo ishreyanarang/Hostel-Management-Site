@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Fee Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:#956d8b; /* Blackish background */
+            color: #ffffff; /* White text */
+            text-align: center; /* Center-align all content */
+        }
+
+        header {
+            background-color: #4b0082; /* Darker purple header */
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #800080; /* Purple navigation bar */
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .fee-section {
+            background-color: #4b0082; /* Purple background for fee sections */
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: left;
+            width: 80%;
+            max-width: 600px;
+            box-sizing: border-box;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+
+        .fee-section h2 {
+            color: #ffffff; /* White text for headings */
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .fee-details {
+            margin-top: 10px;
+        }
+
+        .fee-details p {
+            margin: 5px 0;
+        }
+
+        .date-input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        footer {
+            background-color: #4b0082; /* Darker purple footer */
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Hostel Management System</h1>
+    </header>
+
+    <div class="fee-section">
+        <h2>Room Fees</h2>
+        <div class="fee-details">
+            <p>Single Room: Rs. 30,000/month</p>
+            <label for="singleRoomDate">Submission Date:</label>
+            <input type="date" id="singleRoomDate" name="singleRoomDate" class="date-input">
+            <p>Double Room: Rs. 20,000/month</p>
+            <label for="doubleRoomDate">Submission Date:</label>
+            <input type="date" id="doubleRoomDate" name="doubleRoomDate" class="date-input">
+            <!-- Add more room types as needed -->
+        </div>
+    </div>
+
+    <div class="fee-section">
+        <h2>Mess Fees</h2>
+        <div class="fee-details">
+            <p>Breakfast: Rs. 12,000/month</p>
+            <label for="breakfastDate">Submission Date:</label>
+            <input type="date" id="breakfastDate" name="breakfastDate" class="date-input">
+            <p>Lunch: Rs. 16,000/month</p>
+            <label for="lunchDate">Submission Date:</label>
+            <input type="date" id="lunchDate" name="lunchDate" class="date-input">
+            <p>Dinner: Rs. 14,000/month</p>
+            <label for="dinnerDate">Submission Date:</label>
+            <input type="date" id="dinnerDate" name="dinnerDate" class="date-input">
+            <!-- Add more meal types as needed -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Hostel Management System. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
