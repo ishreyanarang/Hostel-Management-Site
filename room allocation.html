@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Room Allocation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #956d8b; /* Blackish background */
+            color: #ffffff; /* White text */
+            text-align: center; /* Center-align all content */
+        }
+
+        header {
+            background-color: #4b0082; /* Darker purple header */
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #800080; /* Purple navigation bar */
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .allocation-form {
+            background-color: #4b0082; /* Purple background for the form */
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: left;
+            width: 80%;
+            max-width: 600px;
+            box-sizing: border-box;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+
+        .allocation-form label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .allocation-form input,
+        .allocation-form select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        .allocation-form button {
+            background-color: #800080; /* Purple button */
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #4b0082; /* Darker purple footer */
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Hostel Management System</h1>
+    </header>
+
+
+
+    <div class="allocation-form">
+        <h2>Online Room Allocation</h2>
+        <form action="#" method="post">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="preferences">Room Preferences:</label>
+            <select id="preferences" name="preferences" onchange="calculateTotal()">
+                <option value="single">Single Room - Rs. 30,000/month</option>
+                <option value="double">Double Room - Rs. 20,000/month</option>
+          
+            </select>
+
+            <label for="total">Total Price:</label>
+            <input type="text" id="total" name="total" readonly>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function calculateTotal() {
+            var preferences = document.getElementById("preferences");
+            var total = document.getElementById("total");
+
+            if (preferences.value === "single") {
+                total.value = "Rs. 30,000/month";
+            } else if (preferences.value === "double") {
+                total.value = "Rs. 20,000/month";
+           
+            }
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Hostel Management System. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
