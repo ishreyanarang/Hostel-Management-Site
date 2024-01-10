@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Visitor Log</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #956d8b; /* Blackish background */
+            color: #ffffff; /* White text */
+            text-align: center; /* Center-align all content */
+        }
+
+        header {
+            background-color: #4b0082; /* Darker purple header */
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #800080; /* Purple navigation bar */
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .visitor-section {
+            background-color: #4b0082; /* Purple background for visitor section */
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: left;
+            width: 80%;
+            max-width: 600px;
+            box-sizing: border-box;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+
+        .visitor-section h2 {
+            color: #ffffff; /* White text for headings */
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .visitor-details {
+            margin-top: 10px;
+        }
+
+        .visitor-details p {
+            margin: 5px 0;
+        }
+
+        .search-form {
+            margin-top: 20px;
+        }
+
+        .search-form input[type="date"] {
+            width: 70%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .search-form button {
+            width: 30%;
+            padding: 10px;
+            box-sizing: border-box;
+            cursor: pointer;
+            background-color: #800080; /* Purple button background */
+            color: #ffffff; /* White button text */
+            border: none;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #4b0082; /* Darker purple footer */
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Hostel Management System</h1>
+    </header>
+
+ 
+
+    <div class="search-form">
+      <h2>  <label for="searchDate">Enter Date to Check Visitors:</label> </h2>
+        <input type="date" id="searchDate" name="searchDate">
+        <button onclick="searchVisitors()">Search</button>
+    </div>
+
+    <div class="visitor-section" id="visitorLog">
+        <h2>Visitor Log</h2>
+        <!-- Visitor details will be displayed here after search -->
+    </div>
+
+    <script>
+        function searchVisitors() {
+            var searchDate = document.getElementById("searchDate").value;
+            var visitorLog = document.getElementById("visitorLog");
+
+            // Perform search and populate visitor details based on the entered date
+            // For demonstration purposes, a sample result is displayed
+            var result = "<div class='visitor-details'>" +
+                "<p>Visitor Name: Sanjay </p>" +
+                "<p>Visit Date: " + searchDate + "</p>" +
+                "<p>Visit Time: 14:30</p>" +
+                "<p>Purpose of Visit: Meeting with Student</p>" +
+                "</div>";
+
+            visitorLog.innerHTML = result;
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Hostel Management System. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
